@@ -1,0 +1,13 @@
+
+@use '@angular/material' as mat;
+
+::ng-deep{
+  .searchbar{
+    @include mat.all-component-densities(-2);
+    padding-left:80px;
+  }
+
+  .logo {
+    padding:0px 32px
+  }
+}

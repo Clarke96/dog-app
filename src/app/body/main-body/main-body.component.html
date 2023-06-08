@@ -1,0 +1,15 @@
+<button
+  mat-stroked-button
+  color="primary"
+  *ngIf="searchWord$ | async"
+  (click)="clearSearch()">
+  Clear filter: "{{ searchWord$ | async }}"
+</button>
+<div class="tile-wrappers">
+  <div *ngFor="let dog of dogs$ | async">
+    <doggy-dog-tile
+      *ngIf="dog"
+      [dog]="dog"
+      (openDialog)="openDialog($event)"></doggy-dog-tile>
+  </div>
+</div>

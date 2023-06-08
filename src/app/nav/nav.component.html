@@ -1,0 +1,19 @@
+<mat-toolbar color="secondary">
+  <span class="logo">Woofipedia</span>
+  <div class="searchbar">
+    <mat-form-field subscriptSizing="dynamic" class="searchbar">
+      <input
+        matInput
+        [formControl]="filterSearch"
+        (keyup.enter)="search()"
+        placeholder="Search dogs" />
+      <button mat-button matSuffix color="primary" (click)="search()">
+        Woof!
+      </button>
+    </mat-form-field>
+  </div>
+</mat-toolbar>
+
+<doggy-main-body
+  (resetSearch)="resetSearch()"
+  [searchWord$]="searchWord$"></doggy-main-body>

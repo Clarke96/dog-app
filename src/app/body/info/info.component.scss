@@ -1,0 +1,32 @@
+.content-wrapper{
+  display:flex;
+  height: 300px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+mat-dialog-content{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.image-wrapper {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.info-wrapper {
+  display: inline-block;
+    width: 45%;
+}
+
+img {
+    max-height: 100%;
+    object-fit: cover;
+}

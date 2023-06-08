@@ -1,0 +1,31 @@
+.dog-tile {
+  height: 280px;
+  width: 320px;
+  margin:32px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 28px;
+  &:hover{
+    .breed{visibility: visible;}
+  }
+}
+
+img {
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.breed{
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  visibility: hidden;
+  color: white;
+  font-size: 22px;
+  background-color: rgba(0,0,0,0.3);
+}
+

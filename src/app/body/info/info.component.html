@@ -1,0 +1,41 @@
+<h2 mat-dialog-title>{{ dog?.name }}</h2>
+
+<mat-dialog-content>
+  <div class="content-wrapper">
+    <div class="image-wrapper">
+      <img
+        [src]="dog?.image?.url || ''"
+        [width]="dog?.image?.width"
+        [height]="dog?.image?.height"
+        [alt]="dog?.name"
+        la />
+    </div>
+    <div class="info-wrapper">
+      <dl>
+        <dt>Breed Group</dt>
+        <dd>{{ dog?.breed_group }} Pounds</dd>
+        <dt>Weight</dt>
+        <dd>{{ dog?.weight?.imperial }} Pounds</dd>
+        <dt>Height</dt>
+        <dd>{{ dog?.height?.metric }} Centimeters</dd>
+        <dt>Life-span</dt>
+        <dd>{{ dog?.life_span }}</dd>
+        <dt>Temperament</dt>
+        <dd>{{ dog?.temperament }}</dd>
+        <dt *ngIf="dog?.origin">Origin</dt>
+        <dd>{{ dog?.origin }}</dd>
+      </dl>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button mat-icon-button (click)="previousDog()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <button mat-button color="primary" cdkFocusInitial (click)="close()">
+    Close
+  </button>
+  <button mat-icon-button (click)="nextDog()">
+    <mat-icon>arrow_forward</mat-icon>
+  </button>
+</mat-dialog-actions>

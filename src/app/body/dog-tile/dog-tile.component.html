@@ -1,0 +1,15 @@
+<div
+  class="dog-tile"
+  tabindex="0"
+  (click)="expandTile()"
+  (keyup.Enter)="expandTile()">
+  <img
+    [ngSrc]="dog.image.url"
+    [width]="dog.image.width"
+    [height]="dog.image.height"
+    [alt]="dog.name"
+    la />
+  <div class="breed">
+    <span> {{ dog.name }}</span>
+  </div>
+</div>
