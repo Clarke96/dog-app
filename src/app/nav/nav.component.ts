@@ -39,8 +39,7 @@ export class NavComponent implements OnInit {
 
   resetSearch(): void {
     this.searchWordSubject.next('');
-    const dogIds = this.allDogs.map(dog => dog.id);
-    this.store.dispatch(DogsActions.modifyDogs({ dogIds }));
+    this.store.dispatch(ApiActions.retrievedDogsList());
     this.filterSearch.setValue('');
   }
 }
